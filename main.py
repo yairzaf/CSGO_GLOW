@@ -65,25 +65,3 @@ while(win32api.GetKeyState(0x75)==F6):
             handle.write_uchar(glow_obj+((gindex*0x38)+0x24),1)
             handle.write_uchar(glow_obj+((gindex*0x38)+0x25),0)
         
-'''
-m_fFlag=handle.read_int(local_player_ptr+flag_offset)
-print(m_fFlag)
-
-
-
-
-print("made for Guided Hacking by puppet master")
-print("press F6 to exit,hold space to bunny hop")
-F6=win32api.GetKeyState(0x75)
-while(win32api.GetKeyState(0x75)==F6):
-    while(win32api.GetKeyState(0x20)==-128 or win32api.GetKeyState(0x20)==-127):     
-        m_fFlag=handle.read_int(local_player_ptr+flag_offset)
-        if(m_fFlag==256):
-            handle.write_int(client_dll+force_jump_offset,4)
-        else:
-            handle.write_int(client_dll+force_jump_offset,5)
-
-                                                                                 
-os.system("pause")
-
-'''
